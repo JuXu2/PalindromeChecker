@@ -1,29 +1,25 @@
-public void setup()
-{
-  String lines[] = loadStrings("palindromes.txt");
-  System.out.println("there are " + lines.length + " lines");
-  for (int i=0; i < lines.length; i++) 
-  {
-    if(palindrome(lines[i])==true)
-    {
-      System.out.println(lines[i] + " IS a palindrome.");
+// program to check if the string is palindrome or not
+
+function checkPalindrome(str) {
+
+    // convert string to an array
+    const arrayValues = string.split('');
+
+    // reverse the array values
+    const reverseArrayValues = arrayValues.reverse();
+
+    // convert array to string
+    const reverseString = reverseArrayValues.join('');
+
+    if(string == reverseString) {
+        console.log('It is a palindrome');
     }
-    else
-    {
-      System.out.println(lines[i] + " is NOT a palindrome.");
+    else {
+        console.log('It is not a palindrome');
     }
-  }
-}
-public boolean palindrome(String word)
-{
-  //your code here
-  return false;
-}
-public String reverse(String str)
-{
-    String sNew = new String();
-    //your code here
-    return sNew;
 }
 
+//take input
+const string = prompt('Enter a string: ');
 
+checkPalindrome(string);
